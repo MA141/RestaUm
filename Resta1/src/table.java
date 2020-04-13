@@ -23,6 +23,7 @@ public class table {
 				}
 			}
 		}
+		tabela[3][3].preenchido=false; //posicao central
 	}
 	
 	void mostra() {
