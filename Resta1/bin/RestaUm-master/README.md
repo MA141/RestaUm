@@ -1,2 +1,0 @@
-# RestaUm
-Lab 5
