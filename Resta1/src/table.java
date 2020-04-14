@@ -47,11 +47,36 @@ public class table {
 			System.out.print("\n");
 		}
 		System.out.println("  a b c d e f g ");
+		System.out.println("");
 	}
 	
 	
-	void processa() {
-		///Pega duas posicoes, verifica se a pos inicial e a final sao validas (a inicial tem peça e a final não, e se no meio delas tem peça) e depois tira da inicial, coloca na final, e tira a do meio.
+	void processa(String command) {
+		//Pega duas posicoes, verifica se a pos inicial e a final sao validas (a inicial tem peça e a final não, e se no meio delas tem peça) e depois tira da inicial, coloca na final, e tira a do meio.
+	
+		if(isValid(command)) {
+			tabela[6-(((int)(command.charAt(1)))-49)][((int)(command.charAt(0)))-97].preenchido=false;
+			tabela[6-(((int)(command.charAt(4)))-49)][((int)(command.charAt(3)))-97].preenchido=true;
+			if(((int)(command.charAt(1)))==((int)(command.charAt(4)))){//se os numeros sao iguais i.e. se a movimentacao foi na mesma linha
+				if(((int)(command.charAt(0)))>((int)(command.charAt(3)))) {//se a peca se moveu da esquerda para a direita
+					tabela[6-(((int)(command.charAt(4)))-49)][((int)(command.charAt(3)))-96].preenchido=false;
+				}
+				else {
+					tabela[6-(((int)(command.charAt(1)))-49)][((int)(command.charAt(0)))-96].preenchido=false;
+				}
+			}
+			else {
+				if(((int)(command.charAt(1)))>((int)(command.charAt(4)))) {//se a peca se moveu de cima para baixo
+					tabela[7-(((int)(command.charAt(1)))-49)][((int)(command.charAt(0)))-97].preenchido=false;
+				}
+				else {
+					tabela[7-(((int)(command.charAt(4)))-49)][((int)(command.charAt(3)))-97].preenchido=false;
+				}
+			}
+		}
+	}
+	boolean isValid(String com) {
+		return true;
 	}
 	/*
 	boolean isValid(String com) { //com=command
@@ -70,5 +95,12 @@ public class table {
 	}
 	*/
 	
+	void processaTudo(String[] vet){
+		int i = 0, size=vet.length;
+		for(i = 0; i < size ; i++) {
+			processa(vet[i]);
+			mostra();
+		}
+	}
 
 }
