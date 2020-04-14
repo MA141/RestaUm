@@ -1,4 +1,4 @@
 # RestaUm
-Componentes:
-Artur Abreu Hendler - 231713
-Guilherme Zeferino Rodrigues Dobins - 236129
+## Componentes:
+<p> Artur Abreu Hendler - 231713
+<p> Guilherme Zeferino Rodrigues Dobins - 236129
