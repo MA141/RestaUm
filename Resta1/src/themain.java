@@ -8,7 +8,7 @@ public class themain {
 		tab.mostra();
 		
 		CSVReader test = new CSVReader();
-		test.setDataSource("_SEU_DIRETORIO_\\Resta1\\teste1.csv");
+		test.setDataSource("_XXXXX_\Resta1\\teste1.csv");
 		String commands[] = test.requestCommands();
 			
 		tab.processaTudo(commands);
