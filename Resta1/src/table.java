@@ -34,7 +34,7 @@ public class table {
 			for(int j=0; j<7; j++) {
 				if(tabela[i][j].valido==true) {
 					if(tabela[i][j].preenchido==true) {
-						System.out.print("1 ");
+						System.out.print("P ");
 					}
 					else {
 						System.out.print("- ");
